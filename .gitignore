@@ -1,0 +1,29 @@
+
+# Node
+node_modules
+pnpm-lock.yaml
+
+# Next.js
+.next
+out
+dist
+
+# Env files
+.env
+.env.local
+
+# Logs
+*.log
+
+# MacOS system files
+.DS_Store
+
+# Vercel deployment folder
+.vercel
+
+# VSCode settings
+.vscode
+
+# Other temp files
+*.tmp
+*.temp

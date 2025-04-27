@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback } from "react"
 import { useRouter } from "next/navigation"
 import { useToast } from "@/components/ui/use-toast"
-import jwt_decode from "jwt-decode"
-
+import { jwtDecode } from "jwt-decode";
 interface TokenPayload {
   userId: string
   email: string
@@ -24,7 +23,7 @@ export function useAuthToken() {
     if (storedToken) {
       try {
         // Check if token is expired
-        const decoded = jwt_decode<TokenPayload>(storedToken)
+        const decoded = jwtDecode<TokenPayload>(storedToken)
         const currentTime = Date.now() / 1000
 
         if (decoded.exp < currentTime) {
